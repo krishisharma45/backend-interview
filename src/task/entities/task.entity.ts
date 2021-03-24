@@ -5,7 +5,7 @@ export class Task{
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
+    @Column({default: 'empty taskstring'})
     taskString: string;
 
     @Column()

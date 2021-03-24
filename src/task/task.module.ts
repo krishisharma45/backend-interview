@@ -4,7 +4,7 @@ import { TaskController } from './task.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Task } from './entities/task.entity';
 
-// creates module defining data flow and routing information for tasks in app
+// creates module by defining which repository are registered
 @Module({
   imports: [TypeOrmModule.forFeature([Task])],
   providers: [TaskService],

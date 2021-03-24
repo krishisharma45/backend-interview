@@ -9,27 +9,29 @@ export class TaskController {
 
     // routing information to fetch all tasks
     @Get()
-    index(): Promise<Task[]>{
-        return this.taskService.findAll()
+    async index(): Promise<Task[]>{
+      return this.taskService.findAll()
     }
 
     // routing information to create a new task
     @Post('create')
     async create(@Body() taskData: Task): Promise<any>{
-        return this.taskService.create(taskData)
+      console.log('Created a new task');
+      return this.taskService.create(taskData)
     }
 
     // routing information to update a task using a task ID
     @Put(':id/update')
     async update(@Param('id') id, @Body() taskData: Task): Promise<any>{
-        taskData.id = Number(id);
-        console.log('Update #: ' + taskData.id);
-        return this.taskService.update(taskData)
+      taskData.id = Number(id);
+      console.log('Updated task #' + taskData.id);
+      return this.taskService.update(taskData)
     }
 
     // routing information to delete all information for a task using a task ID
     @Delete(':id/delete')
     async delete(@Param('id') id): Promise<any>{
-        return this.taskService.delete(id);
+      console.log('Deleted task #' + id);
+      return this.taskService.delete(id);
     }
 }

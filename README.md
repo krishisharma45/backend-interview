@@ -5,12 +5,13 @@ This project uses NestJS to build a standard to-do app. The to-do app's function
 This application can be accessed locally. To run this app, follow these steps:
 
 1. clone this repo
-2. change direcotyr into the project folder (todo)
-3. run the following commands to get started with NPM and NestJS:
+2. change directory into the project folder (todo)
+3. add your credentials in a .env file (refer to template.env for the format)
+4. run the following commands to get started with NPM and NestJS:
 
 
 ### NestJS Instructions
-The following are instructions on how to use this NestJS application. 
+The following are instructions on how to use this NestJS application.
 
 #### Description
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
